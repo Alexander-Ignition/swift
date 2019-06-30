@@ -3325,7 +3325,7 @@ ParserStatus Parser::parseInheritance(SmallVectorImpl<TypeLoc> &Inherited,
       // If we aren't allowed to have a class requirement here, complain.
       auto classLoc = consumeToken();
       if (!allowClassRequirement) {
-        diagnose(classLoc, diag::unexpected_class_constraint);
+        // diagnose(classLoc, diag::unexpected_class_constraint);
 
         // Note that it makes no sense to suggest fixing
         // 'struct S : class' to 'struct S : AnyObject' for
@@ -6305,7 +6305,7 @@ parseDeclProtocol(ParseDeclOptions Flags, DeclAttributes &Attributes) {
   if (Tok.is(tok::colon)) {
     colonLoc = Tok.getLoc();
     Status |= parseInheritance(InheritedProtocols,
-                               /*allowClassRequirement=*/true,
+                               /*allowClassRequirement=true*/false,
                                /*allowAnyObject=*/true);
   }
 
