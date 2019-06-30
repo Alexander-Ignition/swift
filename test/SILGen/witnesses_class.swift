@@ -1,7 +1,7 @@
 
 // RUN: %target-swift-emit-silgen -module-name witnesses_class %s | %FileCheck %s
 
-protocol Fooable: class {
+protocol Fooable: AnyObject {
   func foo()
   static func bar()
   init()

@@ -106,7 +106,7 @@ if let bar2 = foo2 as? Barrable {
   print("not barrable 2") // CHECK-NEXT: not barrable
 }
 
-protocol Runcible: class {
+protocol Runcible: AnyObject {
   func runce()
 }
 

@@ -1,6 +1,6 @@
 // RUN: %target-typecheck-verify-swift -module-name ModuleName
 
-protocol ClassProtocol : class {
+protocol ClassProtocol : AnyObject {
   init()
   init?(failable: Void)
   init(throwing: Void) throws

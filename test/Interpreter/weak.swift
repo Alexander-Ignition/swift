@@ -1,7 +1,7 @@
 // RUN: %target-run-simple-swift | %FileCheck %s
 // REQUIRES: executable_test
 
-protocol Protocol : class {
+protocol Protocol : AnyObject {
   func noop()
 }
 
@@ -104,7 +104,7 @@ testProtocol()
 
 
 
-protocol P : class { }
+protocol P : AnyObject { }
 
 func test_rdar15293354() {
   weak var x : P? = .none

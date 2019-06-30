@@ -240,7 +240,7 @@ func test_arguments(_ a : Int,
 }
 
 
-protocol ClassBoundProtocolMutating : class {
+protocol ClassBoundProtocolMutating : AnyObject {
   mutating       // expected-error {{'mutating' isn't valid on methods in classes or class-bound protocols}} {{3-12=}}
   func f()
 }
@@ -340,7 +340,7 @@ extension OpaqueBase {
   var x: Int { get { return 0 } set { } } // expected-note {{candidate is marked 'mutating' but protocol does not allow it}}
 }
 
-protocol OpaqueRefinement : class, OpaqueBase {
+protocol OpaqueRefinement : AnyObject, OpaqueBase {
   var x: Int { get set } // expected-note {{protocol requires property 'x' with type 'Int'}}
 }
 

@@ -2,10 +2,10 @@
 
 // REQUIRES: CPU=x86_64
 
-protocol ClassBound : class {
+protocol ClassBound : AnyObject {
   func classBoundMethod()
 }
-protocol ClassBound2 : class {
+protocol ClassBound2 : AnyObject {
   func classBoundMethod2()
 }
 protocol ClassBoundBinary : ClassBound {

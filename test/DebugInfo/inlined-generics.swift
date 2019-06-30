@@ -23,7 +23,7 @@ public func foo2<S:P>(_ s: S) {
 // More complex example -- we inline an alloc_stack that references a VarDecl
 // with generic type.
 
-public protocol Q : class {
+public protocol Q : AnyObject {
   associatedtype T : Equatable
 
   var old: T? { get set }

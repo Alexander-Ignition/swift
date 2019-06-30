@@ -47,7 +47,7 @@ func f3() {
 
 // SR-5375
 
-protocol Bindable: class { }
+protocol Bindable: AnyObject { }
 
 extension Bindable {
   func test<Value>(to targetKeyPath: ReferenceWritableKeyPath<Self, Value>, change: Value?) {

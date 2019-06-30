@@ -1,7 +1,7 @@
 // RUN: %target-run-simple-swift
 // REQUIRES: executable_test
 
-protocol MyClassDelegate: class {
+protocol MyClassDelegate: AnyObject {
     func didFindCureForCancer()
 }
 

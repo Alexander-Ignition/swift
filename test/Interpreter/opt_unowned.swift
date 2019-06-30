@@ -1,7 +1,7 @@
 // RUN: %target-run-simple-swift | %FileCheck %s
 // REQUIRES: executable_test
 
-protocol Protocol : class {
+protocol Protocol : AnyObject {
   func noop()
 }
 

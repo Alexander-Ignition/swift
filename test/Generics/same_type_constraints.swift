@@ -103,12 +103,12 @@ public final class IterateGenerator<A> : IteratorProtocol {
 }
 
 // rdar://problem/18475138
-public protocol Observable : class {
+public protocol Observable : AnyObject {
     associatedtype Output
     func addObserver(_ obj : @escaping (Output) -> Void)
 }
 
-public protocol Bindable : class {
+public protocol Bindable : AnyObject {
     associatedtype Input
     func foo()
 }

@@ -10,7 +10,7 @@
 // SILCombiner::propagateConcreteTypeOfInitExistential fails to full propagate
 // type substitutions.
 //===----------------------------------------------------------------------===//
-public protocol P: class {}
+public protocol P: AnyObject {}
 
 extension P {
   public func returnSelf() -> Self {
@@ -42,7 +42,7 @@ public func testReturnSelf() -> P {
 // Although sil-combine will not replace the self operand, it will still
 // rewrite the witness_method. The devirtualizer then handles the first call.
 //===----------------------------------------------------------------------===//
-public protocol PP: class {
+public protocol PP: AnyObject {
   func returnOptionalSelf() -> Self?
 }
 

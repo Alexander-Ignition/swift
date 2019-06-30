@@ -91,7 +91,7 @@ public protocol P {
   func f() -> Self
 }
 
-public protocol CP : class {
+public protocol CP : AnyObject {
   func f() -> Self
 }
 

@@ -16,11 +16,11 @@ typealias AnyObject = Builtin.AnyObject
 protocol NotClassBound {
   func notClassBoundMethod()
 }
-protocol ClassBound : class {
+protocol ClassBound : AnyObject {
   func classBoundMethod()
 }
 
-protocol ClassBound2 : class {
+protocol ClassBound2 : AnyObject {
   func classBound2Method()
 }
 
@@ -148,7 +148,7 @@ protocol HasMutatingMethod {
   var nonMutatingCounter: Value { get nonmutating set }
 }
 
-protocol InheritsMutatingMethod : class, HasMutatingMethod {}
+protocol InheritsMutatingMethod : AnyObject, HasMutatingMethod {}
 
 func takesInOut<T>(_: inout T) {}
 

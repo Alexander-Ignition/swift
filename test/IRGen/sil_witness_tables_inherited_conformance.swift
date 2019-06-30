@@ -2,7 +2,7 @@
 
 // rdar://problem/20628295
 
-protocol Panda : class {
+protocol Panda : AnyObject {
   init()
   func getCutenessLevel() -> Int
 }

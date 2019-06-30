@@ -12,7 +12,7 @@ protocol Fooable {
   var prop3: Int { get nonmutating set }
 }
 
-protocol Barrable: class {
+protocol Barrable: AnyObject {
   init()
   func foo(_ x: Int)
   func bar()

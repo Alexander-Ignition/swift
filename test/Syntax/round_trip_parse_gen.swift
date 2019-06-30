@@ -189,7 +189,7 @@ private struct S<A, B>: Base where A: B {
   private struct S: A, B {}
 }
 
-protocol P: class {}
+protocol P: AnyObject {}
 
 func foo(_ _: Int,
          a b: Int = 3 + 2,

@@ -106,7 +106,7 @@ class NSManagedAndNonObjCNotAllowed {
 struct SomeStruct { }
 @nonobjc extension SomeStruct { } // expected-error{{only extensions of classes can be declared @nonobjc}}
 
-protocol SR4226_Protocol : class {}
+protocol SR4226_Protocol : AnyObject {}
 
 extension SR4226_Protocol {
   @nonobjc func function() {} // expected-error {{only class members and extensions of classes can be declared @nonobjc}}

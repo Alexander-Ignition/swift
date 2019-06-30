@@ -12,7 +12,7 @@
 
 import Cocoa
 
-protocol A: class {
+protocol A: AnyObject {
     var target: AnyObject? { set } // FIXME: Missing "get" wrt extension on NSControl leads to crash.
 }
 

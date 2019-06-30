@@ -222,7 +222,7 @@ extension NSObject : HasThickness {
   @objc var thickness: Int { get { return global2 } set { global2 = newValue } }
 }
 
-protocol HasThickness : class {
+protocol HasThickness : AnyObject {
   var thickness: Int { get set }
 }
 

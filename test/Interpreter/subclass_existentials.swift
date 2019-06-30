@@ -137,7 +137,7 @@ class Derived : Base<Int>, P {
   }
 }
 
-protocol Q : class {}
+protocol Q : AnyObject {}
 
 var SubclassExistentialsTestSuite = TestSuite("SubclassExistentials")
 

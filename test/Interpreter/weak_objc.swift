@@ -6,7 +6,7 @@
 
 import Foundation
 
-protocol Protocol : class {
+protocol Protocol : AnyObject {
   func noop()
 }
 

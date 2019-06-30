@@ -16,7 +16,7 @@ public struct AbsolutePath {
     public init(_ absStr: String) {}
 }
 
-public protocol FileSystem: class {
+public protocol FileSystem: AnyObject {
     func getDirectoryContents(_ path: AbsolutePath) throws -> [String]
 }
 public extension FileSystem {

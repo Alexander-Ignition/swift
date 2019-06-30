@@ -3,7 +3,7 @@
 
 import Swift
 
-protocol ClassProto : class { }
+protocol ClassProto : AnyObject { }
 
 struct Pointer {
   var value: Builtin.RawPointer
@@ -268,7 +268,7 @@ func class_archetype_to_raw_pointer<T : C>(_ t: T) -> Builtin.RawPointer {
   return Builtin.bridgeToRawPointer(t)
 }
 
-protocol CP: class {}
+protocol CP: AnyObject {}
 
 func existential_to_raw_pointer(_ p: CP) -> Builtin.RawPointer {
   return Builtin.bridgeToRawPointer(p)
@@ -647,7 +647,7 @@ func isUnique_native(_ ref: inout Builtin.BridgeObject) -> Bool {
 
 class A {}
 protocol PUnknown {}
-protocol PClass : class {}
+protocol PClass : AnyObject {}
 
 // CHECK-LABEL: sil hidden [ossa] @$s8builtins19refcast_generic_any{{[_0-9a-zA-Z]*}}F
 // CHECK: unchecked_ref_cast_addr  T in %{{.*}} : $*T to AnyObject in %{{.*}} : $*AnyObject

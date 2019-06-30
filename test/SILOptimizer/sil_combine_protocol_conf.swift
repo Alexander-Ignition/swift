@@ -1,7 +1,7 @@
 // RUN: %target-swift-frontend %s -O -wmo -emit-sil -Xllvm -sil-disable-pass=DeadFunctionElimination -enforce-exclusivity=unchecked | %FileCheck %s
 
 // case 1: class protocol -- should optimize
-internal protocol SomeProtocol : class {
+internal protocol SomeProtocol : AnyObject {
   func foo(x:SomeProtocol)  -> Int
   func foo_internal()  -> Int
 }

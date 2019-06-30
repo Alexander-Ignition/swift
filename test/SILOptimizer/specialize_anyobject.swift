@@ -2,7 +2,7 @@
 // RUN: %target-swift-frontend -module-name specialize_anyobject -O -sil-inline-threshold 0 -emit-sil -primary-file %s | %FileCheck %s
 
 // rdar://problem/20338028
-protocol PA: class { }
+protocol PA: AnyObject { }
 protocol PB { associatedtype B: PA }
 
 class CA: PA { }

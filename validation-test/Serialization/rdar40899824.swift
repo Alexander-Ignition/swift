@@ -9,7 +9,7 @@
 
 import rdar40899824Helper
 
-public protocol Proto: class {
+public protocol Proto: AnyObject {
   func use(_: SoonToBeMissing)
   func unrelated()
 }

@@ -1,7 +1,7 @@
 // RUN: %target-run-simple-swift | %FileCheck %s
 // REQUIRES: executable_test
 
-protocol Bar : class {
+protocol Bar : AnyObject {
 }
 
 public class Foo : Bar {

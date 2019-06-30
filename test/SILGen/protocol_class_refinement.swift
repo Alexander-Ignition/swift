@@ -13,7 +13,7 @@ extension UID {
     }
 }
 
-protocol ObjectUID : class, UID {}
+protocol ObjectUID : AnyObject, UID {}
 
 extension ObjectUID {
     var secondNextCLSID: Int {

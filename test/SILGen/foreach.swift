@@ -36,7 +36,7 @@ struct GenericStruct<T> {
 }
 
 protocol P {}
-protocol ClassP : class {}
+protocol ClassP : AnyObject {}
 
 protocol GenericCollection : Collection {
 

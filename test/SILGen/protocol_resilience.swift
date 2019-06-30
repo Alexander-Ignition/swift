@@ -203,7 +203,7 @@ public protocol ReabstractSelfBase {
   // No requirements
 }
 
-public protocol ReabstractSelfRefined : class, ReabstractSelfBase {
+public protocol ReabstractSelfRefined : AnyObject, ReabstractSelfBase {
   // A requirement with 'Self' abstracted as a class instance
   var callback: (Self) -> Self { get set }
 }

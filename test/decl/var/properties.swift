@@ -1255,8 +1255,8 @@ struct SR3893 {
   var plain: SR3893Box = SR3893Box(value: 0)
 }
 
-protocol WFI_P1 : class {}
-protocol WFI_P2 : class {}
+protocol WFI_P1 : AnyObject {}
+protocol WFI_P2 : AnyObject {}
 
 class WeakFixItTest {
   init() {}

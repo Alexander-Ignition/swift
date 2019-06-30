@@ -10,7 +10,7 @@ protocol P {
   func f() -> Self
 }
 
-protocol CP : class {
+protocol CP : AnyObject {
   func f() -> Self
 }
 

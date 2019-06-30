@@ -35,7 +35,7 @@ protocol ProtocolInitNoArg {
   init()
 }
 
-protocol ClassProtocolInitNoArg : class {
+protocol ClassProtocolInitNoArg : AnyObject {
   init()
 }
 
@@ -57,19 +57,19 @@ protocol ProtocolInitLoadable {
   init(t: Klass)
 }
 
-protocol ClassProtocolInitAddressOnly : class {
+protocol ClassProtocolInitAddressOnly : AnyObject {
   associatedtype SubType : ProtocolInitNoArg
 
   init(t: SubType)
 }
 
-protocol ClassProtocolInitClassProtocol : class {
+protocol ClassProtocolInitClassProtocol : AnyObject {
   associatedtype SubType : ClassProtocolInitNoArg
 
   init(t: SubType)
 }
 
-protocol ClassProtocolInitLoadable : class {
+protocol ClassProtocolInitLoadable : AnyObject {
   init(t: Klass)
 }
 

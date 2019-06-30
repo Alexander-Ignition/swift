@@ -14,7 +14,7 @@ import Foundation
 protocol OuterProto:class {
 }
 
-protocol InnerProto : class {
+protocol InnerProto : AnyObject {
     var outerthings:[OuterProto] { get }
 }
 

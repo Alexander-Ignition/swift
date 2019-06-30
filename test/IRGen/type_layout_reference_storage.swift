@@ -2,8 +2,8 @@
 // RUN: %target-swift-frontend -emit-ir %s -disable-objc-interop | %FileCheck %s -DINT=i%target-ptrsize --check-prefix=CHECK --check-prefix=CHECK-%target-ptrsize --check-prefix=CHECK-native-%target-ptrsize
 
 class C {}
-protocol P: class {}
-protocol Q: class {}
+protocol P: AnyObject {}
+protocol Q: AnyObject {}
 
 // CHECK: @"$s29type_layout_reference_storage26ReferenceStorageTypeLayoutVMn" = hidden constant {{.*}} @"$s29type_layout_reference_storage26ReferenceStorageTypeLayoutVMP"
 // CHECK: define internal %swift.type* @"$s29type_layout_reference_storage26ReferenceStorageTypeLayoutVMi"

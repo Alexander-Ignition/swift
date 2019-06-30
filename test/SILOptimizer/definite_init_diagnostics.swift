@@ -1294,7 +1294,7 @@ class MethodTestChild : MethodTestParent {
 }
 
 // This test makes sure that if we cast self to a protocol (implicitly or not), we properly error.
-protocol ProtocolCastTestProtocol : class {
+protocol ProtocolCastTestProtocol : AnyObject {
 }
 
 class ProtocolCastTestParent {

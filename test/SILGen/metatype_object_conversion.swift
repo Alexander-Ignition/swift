@@ -4,7 +4,7 @@ import Foundation
 
 class C {}
 
-protocol CP : class {}
+protocol CP : AnyObject {}
 
 @objc protocol OP {}
 

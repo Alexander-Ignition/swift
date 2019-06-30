@@ -59,7 +59,7 @@ func dontCrash<P: BaseProt>(_ f: GenericError<P>) {
   testIt(f)
 }
 
-protocol Baz : class {
+protocol Baz : AnyObject {
 }
 extension Baz {
   static func crash(setup: ((Self) -> ())?){

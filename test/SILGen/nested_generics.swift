@@ -12,7 +12,7 @@
 // - generic parameter list on method in nested type
 // - types nested inside unconstrained extensions of generic types
 
-protocol Pizza : class {
+protocol Pizza : AnyObject {
   associatedtype Topping
 }
 

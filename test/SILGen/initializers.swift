@@ -1005,7 +1005,7 @@ extension P1 {
   }
 }
 
-protocol P2 : class {
+protocol P2 : AnyObject {
   init?(p2: Int64)
 }
 

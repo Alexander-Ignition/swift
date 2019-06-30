@@ -28,9 +28,9 @@ struct T: Q {}
 
 private struct U {}
 
-public protocol CP1: class {}
+public protocol CP1: AnyObject {}
 
-public protocol CP2: class {}
+public protocol CP2: AnyObject {}
 
 // Class D implements only one of class protocols
 // and it cannot be extended elsewhere as it is private

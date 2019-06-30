@@ -17,9 +17,9 @@ enum ErrorEnum : Error {
 
 @objc class Class_ObjC1 {}
 
-protocol Protocol_Class1 : class {} // expected-note {{protocol 'Protocol_Class1' declared here}}
+protocol Protocol_Class1 : AnyObject {} // expected-note {{protocol 'Protocol_Class1' declared here}}
 
-protocol Protocol_Class2 : class {}
+protocol Protocol_Class2 : AnyObject {}
 
 @objc protocol Protocol_ObjC1 {}
 

@@ -4,7 +4,7 @@ public class Entity{
 }
 public class DataCollection<T>{
 }
-public protocol IEntityCollection : class{
+public protocol IEntityCollection : AnyObject{
 	func AddEntity(_ entity:Entity)
 }
 public class EntityCollection<T:Entity> : DataCollection<T>, IEntityCollection{

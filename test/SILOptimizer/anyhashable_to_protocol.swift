@@ -4,7 +4,7 @@
 
 import Foundation
 
-protocol FooProtocol : class {
+protocol FooProtocol : AnyObject {
 }
 
 class FooProtocolImplementation : NSObject, FooProtocol {

@@ -1,7 +1,7 @@
 // RUN: %target-swift-emit-silgen  %s | %FileCheck %s
 // RUN: %target-swift-emit-sil -verify %s
 
-protocol BestFriend: class {
+protocol BestFriend: AnyObject {
   init()
   static func create() -> Self
 }

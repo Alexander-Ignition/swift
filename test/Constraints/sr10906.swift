@@ -1,6 +1,6 @@
 // RUN: %target-typecheck-verify-swift
 
-protocol ViewDataSource: class {
+protocol ViewDataSource: AnyObject {
   func foo<T>() -> [T]
 }
 

@@ -24,7 +24,7 @@ public let NIOChannelPipeline = [
     tags: t),
 ]
 
-public protocol EventHandler: class {
+public protocol EventHandler: AnyObject {
     func event(holder: Holder)
 }
 

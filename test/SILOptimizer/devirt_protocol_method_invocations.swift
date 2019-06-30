@@ -177,7 +177,7 @@ public func testSelfReturnType() {
 // Make sure that we are not crashing with an assertion due to specialization
 // of methods with the Self return type.
 // rdar://20955745.
-protocol CP : class { func f() -> Self }
+protocol CP : AnyObject { func f() -> Self }
 func callDynamicSelfClassExistential(_ cp: CP) { cp.f() }
 class PP : CP {
   func f() -> Self { return self }

@@ -4,7 +4,7 @@
 
 protocol A { func a() }
 protocol B { func b() }
-protocol C : class { func c() }
+protocol C : AnyObject { func c() }
 @objc protocol O { func o() }
 @objc protocol OPT { 
   @objc optional func opt()

@@ -26,7 +26,7 @@ enum E : Error { case X }
 
 // This is the same as the protocol_initializers.swift test,
 // but class-bound
-protocol TriviallyConstructible : class {
+protocol TriviallyConstructible : AnyObject {
   init(x: LifetimeTracked)
   init(x: LifetimeTracked, throwsDuring: Bool) throws
   init?(x: LifetimeTracked, failsDuring: Bool)

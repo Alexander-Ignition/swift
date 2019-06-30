@@ -83,7 +83,7 @@ public extension PairLike where FirstType : Cacheable {
   func cacheFirst() { }
 }
 
-public protocol ClassProto : class {}
+public protocol ClassProto : AnyObject {}
 
 @objc public protocol ObjCProtoWithOptional {
   @objc optional func optionalMethod()

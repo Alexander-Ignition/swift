@@ -29,7 +29,7 @@ weak var    weakRef1    : SwiftClass? = strongRef1
 // CHECK-DAG: !DIDerivedType(tag: DW_TAG_typedef, name: "$s10attributes10SwiftClassCXoD"
 unowned var unownedRef1 : SwiftClass
 
-protocol Protocol1 : class {
+protocol Protocol1 : AnyObject {
   func foo(_ x: Float) -> Float
 }
 

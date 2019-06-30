@@ -15,7 +15,7 @@ public class Helper {
   }
 }
 
-protocol P: class {}
+protocol P: AnyObject {}
 
 public class Binding: P {
   private var helper: Helper?

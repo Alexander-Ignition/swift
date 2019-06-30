@@ -37,7 +37,7 @@ protocol AnyProtocol {
   static func <~>(x: Self, y: Self)
 }
 
-protocol ClassProtocol : class {
+protocol ClassProtocol : AnyObject {
   associatedtype AssocType
   associatedtype AssocWithReqt: AssocReqt
 
@@ -341,7 +341,7 @@ protocol InheritedProtocol2 : AnyProtocol {
   func inheritedMethod()
 }
 
-protocol InheritedClassProtocol : class, AnyProtocol {
+protocol InheritedClassProtocol : AnyObject, AnyProtocol {
   func inheritedMethod()
 }
 

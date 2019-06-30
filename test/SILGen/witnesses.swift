@@ -70,7 +70,7 @@ func protocol_objc_method(x: ObjCAble) {
 
 struct Loadable {}
 protocol AddrOnly {}
-protocol Classes : class {}
+protocol Classes : AnyObject {}
 
 protocol X {
   mutating
@@ -92,7 +92,7 @@ protocol WithAssoc {
   func useAssocType(x: AssocType) -> Self
 }
 
-protocol ClassBounded : class {
+protocol ClassBounded : AnyObject {
   func selfTypes(x: Self) -> Self
 }
 
@@ -365,7 +365,7 @@ struct IUOFailableModel : NonFailableRefinement, IUOFailableRequirement {
   init!(foo: Int) { return nil }
 }
 
-protocol FailableClassRequirement: class {
+protocol FailableClassRequirement: AnyObject {
   init?(foo: Int)
 }
 
@@ -373,7 +373,7 @@ protocol NonFailableClassRefinement: FailableClassRequirement {
   init(foo: Int)
 }
 
-protocol IUOFailableClassRequirement: class {
+protocol IUOFailableClassRequirement: AnyObject {
   init!(foo: Int)
 }
 

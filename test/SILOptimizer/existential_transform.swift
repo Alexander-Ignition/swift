@@ -1,6 +1,6 @@
 // RUN: %target-swift-frontend -O -Xllvm -enable-existential-specializer -Xllvm -sil-disable-pass=GenericSpecializer -Xllvm -sil-disable-pass=FunctionSignatureOpts -Xllvm -sil-disable-pass=SILCombine -emit-sil -sil-verify-all %s | %FileCheck %s
 
-internal protocol SomeProtocol : class {
+internal protocol SomeProtocol : AnyObject {
   func foo()  -> Int
 }
 internal class SomeClass: SomeProtocol {
@@ -75,10 +75,10 @@ let _ = wrap_foo_ncp(a:magic2)
 
 
 /// Class Protocol Composition
-internal protocol SomeClassProtocolComp : class {
+internal protocol SomeClassProtocolComp : AnyObject {
   func foo()  -> Int
 }
-internal protocol SomeOtherClassProtocolComp : class {
+internal protocol SomeOtherClassProtocolComp : AnyObject {
   func bar()  -> Int
 }
 internal class SomeClassComp: SomeClassProtocolComp, SomeOtherClassProtocolComp {
@@ -158,7 +158,7 @@ let magic4:SomeNoClassProtocolComp & SomeOtherNoClassProtocolComp = SomeNoClassC
 let _ = wrap_no_foo_bar_comp_ncpc(a:magic4)
 }
 
-internal protocol P : class {
+internal protocol P : AnyObject {
   func foo()  -> Int
 }
 internal class K : P {
@@ -181,7 +181,7 @@ internal class K : P {
  return a.foo()
 }
 
-internal protocol PP : class {
+internal protocol PP : AnyObject {
   func foo()  -> Int
 }
 internal class KK : PP {

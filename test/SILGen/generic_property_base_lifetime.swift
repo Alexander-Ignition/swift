@@ -1,7 +1,7 @@
 
 // RUN: %target-swift-emit-silgen -module-name generic_property_base_lifetime %s -disable-objc-attr-requires-foundation-module -enable-objc-interop | %FileCheck %s
 
-protocol ProtocolA: class {
+protocol ProtocolA: AnyObject {
     var intProp: Int { get set }
 }
 
@@ -9,7 +9,7 @@ protocol ProtocolB {
     var intProp: Int { get }
 }
 
-@objc protocol ProtocolO: class {
+@objc protocol ProtocolO: AnyObject {
     var intProp: Int { get set }
 }
 

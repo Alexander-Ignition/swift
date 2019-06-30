@@ -1,7 +1,7 @@
 
 // RUN: %target-swift-emit-silgen -swift-version 5 -module-name generic_casts -Xllvm -sil-full-demangle %s | %FileCheck --check-prefix=CHECK --check-prefix=CHECK-%target-runtime %s
 
-protocol ClassBound : class {}
+protocol ClassBound : AnyObject {}
 protocol NotClassBound {}
 
 class C : ClassBound, NotClassBound {}

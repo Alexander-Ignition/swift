@@ -365,7 +365,7 @@ extension Int : IndexValue {}
 // Class protocols
 //===----------------------------------------------------------------------===//
 
-protocol IntrusiveListNode : class {
+protocol IntrusiveListNode : AnyObject {
   var next : Self { get }
 }
 
@@ -426,7 +426,7 @@ struct StructDNode : IntrusiveDListNode { // expected-error{{non-class type 'Str
 @objc protocol ObjCProtocol {
   func foo() // expected-note{{protocol requires function 'foo()' with type '() -> ()'}}
 }
-protocol NonObjCProtocol : class { //expected-note{{protocol 'NonObjCProtocol' declared here}}
+protocol NonObjCProtocol : AnyObject { //expected-note{{protocol 'NonObjCProtocol' declared here}}
   func bar()
 }
 

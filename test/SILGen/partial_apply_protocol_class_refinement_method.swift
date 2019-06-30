@@ -2,7 +2,7 @@
 // RUN: %target-swift-emit-silgen -module-name partial_apply_protocol_class_refinement_method %s | %FileCheck %s
 
 protocol P { func foo() }
-protocol Q: class, P {}
+protocol Q: AnyObject, P {}
 
 // CHECK-LABEL: sil hidden [ossa] @$s46partial_apply_protocol_class_refinement_method0A5ApplyyyycAA1Q_pF : $@convention
 // CHECK: bb0([[ARG:%.*]] : @guaranteed $Q):

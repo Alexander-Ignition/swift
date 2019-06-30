@@ -8,8 +8,8 @@ import Foundation
 // Make sure at the end of the file we run the tests.
 defer { runAllTests() }
 
-protocol P : class { }
-protocol C : class { }
+protocol P : AnyObject { }
+protocol C : AnyObject { }
 
 class Foo : NSObject {}
 

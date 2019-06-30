@@ -340,7 +340,7 @@ optionableRuncibles(Hat())
 
 // <rdar://problem/15383966>
 
-protocol ClassProtocol : class {}
+protocol ClassProtocol : AnyObject {}
 
 class Rdar15383966 : ClassProtocol
 {

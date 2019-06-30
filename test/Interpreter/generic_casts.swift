@@ -32,7 +32,7 @@ func anyToIntOrZero(_ x: Any) -> Int {
   return 0
 }
 
-protocol Class : class {}
+protocol Class : AnyObject {}
 
 class C : Class {
 

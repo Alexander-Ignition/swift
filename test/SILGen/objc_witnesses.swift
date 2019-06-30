@@ -115,6 +115,6 @@ extension NSObject : Atom {
 // CHECK: objc_method %0 : $NSObject, #NSObject.valence!setter.1.foreign
 // CHECK: }
 
-protocol Atom : class {
+protocol Atom : AnyObject {
   var valence: Int { get set }
 }

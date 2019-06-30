@@ -2,7 +2,7 @@ public struct Flags {
   public func asBoolean() -> Bool { return true }
 }
 
-public protocol Router : class {
+public protocol Router : AnyObject {
 
 }
 
@@ -10,7 +10,7 @@ extension Router {
   public var flags: Flags { return Flags() }
 }
 
-public protocol Environment : class {
+public protocol Environment : AnyObject {
   var router: Router { get }
 }
 

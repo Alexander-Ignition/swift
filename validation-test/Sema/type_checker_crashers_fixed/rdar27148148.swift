@@ -7,7 +7,7 @@ public protocol I {
 protocol C : I {
 }
 
-protocol A : class {
+protocol A : AnyObject {
   func u<T : Comparable>() -> T?
 }
 

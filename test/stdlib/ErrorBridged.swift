@@ -21,7 +21,7 @@ protocol OtherProtocol {
   var otherProperty: String { get }
 }
 
-protocol OtherClassProtocol : class {
+protocol OtherClassProtocol : AnyObject {
   var otherClassProperty: String { get }
 }
 

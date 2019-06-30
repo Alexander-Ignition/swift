@@ -133,7 +133,7 @@ extension Derived : Abstractable {}
 // CHECK-NEXT: tuple ()
 // CHECK-NEXT: return
 
-protocol ClassAbstractable : class {
+protocol ClassAbstractable : AnyObject {
   associatedtype Result
   var storedFunction: () -> Result { get set }
   var finalStoredFunction: () -> Result { get set }

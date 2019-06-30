@@ -5,4 +5,4 @@
 // https://bugs.swift.org/browse/SR-8378
 
 // CHECK: <kw>protocol</kw> P : <type>class</type>
-protocol P : class
+protocol P : AnyObject

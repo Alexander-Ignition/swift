@@ -27,7 +27,7 @@ func cast<T, U>(_ t: T, to: U.Type) -> U? {
   return t as? U
 }
 
-protocol CP : class {}
+protocol CP : AnyObject {}
 @objc protocol OP {}
 
 class C {}

@@ -641,7 +641,7 @@ func test_open_existential_semantics_opaque(_ guaranteed: P1,
   plusOneP1().f1()
 }
 
-protocol CP1: class {}
+protocol CP1: AnyObject {}
 
 extension CP1 {
   func f1() { }
@@ -758,7 +758,7 @@ extension InitRequirement {
   }
 }
 
-protocol ClassInitRequirement: class {
+protocol ClassInitRequirement: AnyObject {
   init(c: C)
 }
 

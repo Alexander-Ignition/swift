@@ -1,4 +1,4 @@
-public protocol P : class {
+public protocol P : AnyObject {
   associatedtype V
 }
 

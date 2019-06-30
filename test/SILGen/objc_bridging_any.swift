@@ -5,7 +5,7 @@ import Foundation
 import objc_generics
 
 protocol P {}
-protocol CP: class {}
+protocol CP: AnyObject {}
 
 struct KnownUnbridged {}
 

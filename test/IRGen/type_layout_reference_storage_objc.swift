@@ -7,7 +7,7 @@ class NativeClass {}
 class C: NSObject {}
 @objc protocol P {}
 @objc protocol Q {}
-protocol NonObjC: class {}
+protocol NonObjC: AnyObject {}
 
 // CHECK: @"$s34type_layout_reference_storage_objc26ReferenceStorageTypeLayoutVMn" = hidden constant {{.*}} @"$s34type_layout_reference_storage_objc26ReferenceStorageTypeLayoutVMP"
 // CHECK: define internal %swift.type* @"$s34type_layout_reference_storage_objc26ReferenceStorageTypeLayoutVMi"

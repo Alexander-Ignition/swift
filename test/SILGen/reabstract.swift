@@ -124,7 +124,7 @@ func testSharedOwnedOpaque(_ s: C, o: C) {
 // CHECK:   end_borrow [[BORROWED_EXISTENTIAL]]
 // CHECK:   destroy_value [[EXISTENTIAL]]
 // CHECK: } // end sil function '$s10reabstract1P_pIegg_xIegg_AaBRzlTR'
-protocol P : class {}
+protocol P : AnyObject {}
 class Klass : P { }
 extension P { static func crash(setup: ((Self) -> ())?) {} }
 func checkInitExistentialThunk() -> P? {

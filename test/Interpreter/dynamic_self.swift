@@ -8,7 +8,7 @@ protocol P {
   func g() -> Self
 }
 
-protocol CP : class {
+protocol CP : AnyObject {
   func f() -> Self
   func g() -> Self
 }

@@ -18,7 +18,7 @@ class TestGeneric<T> {
 }
 
 protocol P {}
-protocol CP : class {}
+protocol CP : AnyObject {}
 class C : CP {}
 class D : C, P {}
 

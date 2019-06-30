@@ -91,7 +91,7 @@ class MyObject : NSObject, NSCoding, Fungible {
 }
 
 // NEGATIVE-NOT: NotObjC
-protocol NotObjC : class {}
+protocol NotObjC : AnyObject {}
 
 // NEGATIVE-NOT: @interface NSString (SWIFT_EXTENSION(protocols)){{$}}
 extension NSString : NotObjC {}

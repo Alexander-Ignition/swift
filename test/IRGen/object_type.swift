@@ -9,7 +9,7 @@
 // therefore not re-scheduled with release-calls, which would lead to a crash
 // in this example.
 
-public protocol Proto: class {
+public protocol Proto: AnyObject {
    static func printit()
 }
 

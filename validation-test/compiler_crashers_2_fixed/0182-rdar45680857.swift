@@ -1,6 +1,6 @@
 // RUN: %target-swift-frontend -emit-ir %s
 
-public protocol Graph: class, Collection {
+public protocol Graph: AnyObject, Collection {
     associatedtype V
     associatedtype E
 }

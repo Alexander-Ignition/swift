@@ -4,7 +4,7 @@
 
 import Foundation
 
-protocol P: class { }
+protocol P: AnyObject { }
 
 class AbstractP: P { }
 

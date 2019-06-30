@@ -44,7 +44,7 @@ func test_composition_erasure(_ x: HairType & Error) -> Error {
 // CHECK:         [[NEW_EXISTENTIAL2:%.*]] = load [take] [[NEW_EXISTENTIALBUF]]
 // CHECK:         return [[NEW_EXISTENTIAL2]]
 
-protocol HairClass: class {}
+protocol HairClass: AnyObject {}
 
 func test_class_composition_erasure(_ x: HairClass & Error) -> Error {
   return x

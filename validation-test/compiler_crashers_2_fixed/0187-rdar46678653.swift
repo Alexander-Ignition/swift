@@ -1,6 +1,6 @@
 // RUN: not %target-swift-frontend -typecheck %s
 
-protocol P: class { }
+protocol P: AnyObject { }
 
 protocol Q {
   func g()

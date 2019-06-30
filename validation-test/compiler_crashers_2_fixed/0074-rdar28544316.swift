@@ -12,11 +12,11 @@ public protocol PropertyHosting {
     associatedtype PType: Hashable, EntityOwned
 }
 
-public protocol EntityOwned: class {
+public protocol EntityOwned: AnyObject {
     associatedtype Owner
 }
 
-public protocol PropertyType: class {
+public protocol PropertyType: AnyObject {
 }
 
 func useType<T>(cellType: T.Type) {

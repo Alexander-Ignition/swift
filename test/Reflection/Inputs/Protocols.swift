@@ -16,7 +16,7 @@ public protocol P4 {
   func getResult() -> Result
 }
 
-public protocol ClassBoundP: class {
+public protocol ClassBoundP: AnyObject {
   associatedtype Inner
 }
 
